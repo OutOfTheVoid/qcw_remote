@@ -1,0 +1,23 @@
+[package]
+name = "qcw_remote"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+panic-halt = "0.2"
+cortex-m = "0.7.2"
+cortex-m-rt = "0.7"
+critical-section = { version = "1.2.0" }
+defmt = "0.3"
+defmt-rtt = "0.4.0"
+rp235x-hal = {version = "0.3.0", features = ["binary-info", "critical-section-impl", "rt", "defmt"]}
+embedded_hal_0_2 = {package = "embedded-hal", version = "0.2.5", features = ["unproven"]}
+embedded-hal = "1.0.0"
+fugit = "0.3.5"
+nb = "1.0"
+libm = "*"
+proc_bitmap_font = { path = "src/gfx/proc_bitmap_font" }
+embedded-alloc = "0.6"
+qcw_com = { git = "https://github.com/OutOfTheVoid/qcw_com.git", branch = "main" }
